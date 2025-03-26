@@ -26,7 +26,7 @@ public class ClubServiceImpl implements ClubService {
     }
 
     private ClubDto mapToClubDto(Club club) {
-        ClubDto clubDto = ClubDto.builder()
+        return ClubDto.builder()
                 .id(club.getId())
                 .title(club.getTitle())
                 .photoUrl(club.getPhotoUrl())
@@ -34,7 +34,5 @@ public class ClubServiceImpl implements ClubService {
                 .createdOn(club.getCreatedOn())
                 .updatedOn(club.getUpdatedOn())
                 .build();
-
-        return clubDto;
     }
 }
